@@ -1,0 +1,611 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.containerRR .headR .engagement-regular{
+    width: 40%;
+    font-family: "Engagement", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    padding-left: 10px;
+  }
+
+  .containerRR{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+  }
+  
+  .containerRR .sidebar{
+    display: flex;
+    background-color: rgba(0, 0, 0);
+    position: fixed;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 18.8%;
+    height: 90vh;
+    padding-left: 1em;
+    border-right: 1px solid rgb(44, 44, 44);
+    margin-top: 10vh;
+    padding-top: 18px;
+  }
+  .containerRR .headR{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    padding: 18px 2px 5px 2px;
+    padding-left: 0.6em;
+    color: white;
+    width: 18.8%;
+    height: 10vh;
+    border-right: 1px solid rgb(44, 44, 44);
+    /* background-color: #5541D6; */
+  }
+
+  .sidebar  .anch{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width:97%;
+    flex-direction: row;
+    text-decoration: none;
+    margin-bottom: 0.7em;
+    padding: 10px;
+    border-radius: 7px;
+    transition: all 0.2s ease-in-out;
+  }
+  .sidebar .anch:hover{
+    background-color: rgb(29, 28, 28);
+  }
+  .sidebar  .anch:hover .icon{
+    transform: scale(1.2);
+  }
+  .sidebar .anch p{
+    color: white;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
+  }
+  .sidebar .anch .icon{
+    display: flex;
+    padding-top: 6px;
+    position: relative;
+    object-fit: cover;
+    width: 25px;
+  }
+  .sidebar .anch .icon .badge{
+    font-size: 9px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+  .sidebar .anch .icon .fa-solid, .fa-regular, .fa-brands{
+    font-size: 20px;
+    color: rgb(253, 252, 252);
+    
+  }
+  .sidebar .anch:active .fa-solid, .fa-regular, .fa-brands{
+    color: white;
+  }
+  .sidebar .anch:active, .p:active{
+    transform: scale(1.03);
+    color: white;
+    font-weight: 700;
+  }
+  .sidebar .anch .profile img{
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    
+  }
+
+  .sidebar .b{
+    margin-top: 70px;
+  }
+  
+  .containerRR .main{
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    margin-left: 16em;
+  
+  }
+
+  .containerRR .main .post-views{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    align-items: center;
+    /* background-color: rgb(92, 16, 16); */
+    width: 60%;
+    padding: 0px 0px 0px 0px;
+    
+  }
+  .containerRR .main .post-views .stories{
+    /* background-color: #ED1E4F; */
+    overflow-x: scroll;
+    overscroll-behavior-x: scroll;
+    padding-left: 10px;
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1.1em;
+  }
+  .containerRR .main .post-views  .stories::-webkit-scrollbar{
+    width: 0;
+  }
+  
+  .containerRR .main .post-views .stories .friend{
+    display: flex;
+    flex-direction: column;
+    width: 6.1em;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  .containerRR .main .post-views .stories .friend .story-h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom left, #df43b0 20px, #5541D6 , #ED1E4F, #FC824D, #FEC053 90px);
+    width: 72px;
+    height: 72px;
+    
+  }
+
+  .containerRR .main .post-views .stories .friend p{
+    font-size: 12px;
+  }
+
+  /* .containerRR .main .post-views .stories .friend .story-h:visited{
+    background-color: rgb(54, 53, 53);
+  } */
+
+  .containerRR .main .post-views .stories .friend .story-h img{
+    width: 67px;
+    height: 67px;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+
+
+  .containerRR .main .post-views .posts{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: aliceblue; */
+    width: 450px;
+    
+  }
+
+  .containerRR .main .post-views .posts .person{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 3.5em;
+    background-color: rgb(7, 7, 7);
+    margin-bottom: 10px;
+    gap: 4px;
+  }
+
+  .containerRR .main .post-views .posts .person .dp{
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom left, #df43b0, #5541D6 , #ED1E4F, #FC824D, #FEC053);
+    width: 40px;
+    height: 40px;
+  }
+  .containerRR .main .post-views .posts .person .dp img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border:  2px solid #050505;
+    object-fit: contain;
+  }
+
+  .containerRR .main .post-views .posts .person .name{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #df43b0; */
+    
+  }
+  .containerRR .main .post-views .posts .person .name .kk{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin-top: 3px;
+    font-weight: 600;
+    gap: 3px;
+  }
+  .containerRR .main .post-views .posts .person .name .kk>.verified{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    position: relative;
+    margin-left: 3px;
+
+  }
+  .containerRR .main .post-views .posts .person .name .kk .verified .star{
+    color: #0095F6;
+  }
+  .containerRR .main .post-views .posts .person .name .kk .verified .check{
+    position: absolute;
+    top: 50;
+    left: 50;
+    z-index: 1;
+  }
+  .containerRR .main .post-views .posts .person .name .kk .dot{
+    margin: 7px 5px 5px 5px;
+    width: 5px;
+    height: 5px;
+    background-color: #797373;
+    border-radius: 50%;
+    
+  }
+  
+  .containerRR .main .post-views .posts .person .option{
+    width: 19px;
+    /* background-color: #FEC053; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: 130px;
+  }
+
+  .containerRR .main .post-views .posts .video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 87vh;
+  border-radius: 5px;
+  background-color: #050505;
+  border: 1px solid rgb(70, 68, 68);
+}
+.containerRR .main .post-views .posts .video video, .img,iframe{
+  width: 100%;
+  height: 86vh;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/* .containerRR .main .post-views .posts .reelvideo iframe{
+  object-fit: contain;
+  width: 60vw;
+} */
+
+
+.containerRR .main .post-views .posts .reactions{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px 10px 0px;
+}
+.containerRR .main .post-views .posts .reactions .react{
+  display: flex;
+  flex: 3;
+  gap: 15px;
+}
+
+.containerRR .main .post-views .posts .reactions div>.fa-regular{
+  font-size: 25px;
+}
+.containerRR .main .post-views .posts .reactions div>.fa-regular:hover{
+  color: #726666;
+}
+.containerRR .main .post-views .posts .activities, .caption {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.containerRR .main .post-views .posts .activities .caption{
+  display: flex;
+  flex-direction: row;
+}
+
+.containerRR .main .post-views .posts .activities .caption .verified{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  position: relative;
+}
+
+.containerRR .main .post-views .posts .activities .caption .verified .star{
+  color: #0095F6;
+}
+
+.containerRR .main .post-views .posts .activities .check{
+    position: absolute;
+    top: 50;
+    left: 50;
+    z-index: 1;
+  }
+
+.containerRR .main .post-views .posts .activities p, .caption, a{
+  color: rgb(230, 221, 221);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+.containerRR .main .post-views .posts .comments{
+  position: relative;
+  /* background-color: aqua; */
+}
+
+
+.containerRR .main .post-views .posts .comments .com{
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 14px;
+  color: white;
+  padding: 3px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  resize: none;
+  
+  /* position: relative; */
+}
+.containerRR .main .post-views .posts .comments .smile{
+  position: absolute;
+  top: 16px;
+  right: 0;
+  font-size: 12px;
+  color: #aaa6a6;
+} 
+
+
+
+
+
+.containerRR .main .followers{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 40px 10px 0px 60px;
+  gap: 15px;
+  background-color: #000000;
+}
+.containerRR .main .followers .follower-holder{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.containerRR .main .followers .follower-holder .follower-detail{
+  width: 180px;
+  /* background-color: #df43b0; */
+  display: flex;
+  flex-direction: column;
+}
+.containerRR .main .followers .follower-holder .follower-detail a{
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.containerRR .main .followers .follower-holder .follower-detail .full-name{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(207, 207, 206);
+  font-size: 13px;
+}
+.containerRR .main .followers .follower-holder .follower-detail a .verified{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    position: relative;
+    margin-left: 3px;
+    font-size: 12px;
+  } 
+.containerRR .main .followers .follower-holder .follower-detail a{
+  color: rgb(255, 255, 255);
+}
+.containerRR .main .followers .follower-holder .follower-detail .verified .star{
+  color: #0095F6;
+}
+.containerRR .main .followers .follower-holder .follower-detail .verified .check{
+  color: aliceblue;
+  position: absolute;
+  top: 50;
+  left: 50;
+  z-index: 1;
+} 
+.containerRR .main .followers .follower-holder .switch{
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* background-image: linear-gradient(to bottom left, #df43b0, #5541D6 , #ED1E4F, #FC824D, #FEC053); */
+  width: 45px;
+  height: 45px;
+}
+
+.containerRR .main .followers .follower-holder .switch img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border:  2px solid #050505; 
+}
+
+.containerRR .main .followers .follower-holder .swt{
+  margin-top: 15px;
+  color: #0095F6 ;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  width: 60px;
+  font-weight: 600;
+}
+
+.containerRR .main .followers  .suggestion{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.containerRR .main .followers  .suggestion p{
+  width: 240px;
+}
+.containerRR .main .followers .suggestion .see{
+  width: 60px;
+  color: rgb(248, 248, 248);
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  margin-left:  10px; 
+}
+
+.containerRR .main .followers .fst{
+  margin-top: 50px;
+}
+
+.containerRR .main .followers .fst>a:hover{
+  text-decoration: underline;
+}
+
+.containerRR .main .followers .fst>a, .scnd{
+  color: #aaa6a6;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+
+
+  @media screen and (max-width:480px)  {
+    body{
+      overflow: visible;
+      background-color: #000000;
+    }
+  
+  .containerRR{
+    width: 100%;
+    /* background-color: rgb(109, 25, 25); */
+    overflow: hidden;
+  }
+  .containerRR .headR .engagement-regular{
+    display: flex;
+    width: 32%;
+    font-size: 45px;
+    color: rgb(243, 237, 237);
+    object-fit: contain;
+    text-align: left;
+    overflow: hidden;
+    /* background-color: #FEC053; */
+  }
+  .containerRR .headR{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #0c0c0c;
+    height: 7%;
+    padding: 3px 2px 2px 2px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    object-fit: cover;
+  }
+   .containerRR .sidebar{
+    object-fit: cover;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #0095F6; */
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 7%;
+    z-index: 8;
+    border-top: 1px solid rgb(141, 135, 135);
+   }
+   .containerRR .sidebar .anch>p{
+    display: none;
+   }
+   .containerRR .main{
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+    padding: 0 auto;
+   }
+   .containerRR .main .followers{
+    display: none;
+
+   } 
+
+   .containerRR .main .post-views  .stories{
+    width:12vh ;
+    gap: 0.1em;
+    height: 14vh;
+   }
+   .containerRR .main .post-views  .stories::-webkit-scrollbar{
+    width: 1;
+  }
+  .containerRR .main .post-views  .stories .friend p{
+    font-size: 10px;
+    overflow: hidden;
+  }
+   .containerRR .main .post-views  .stories .friend .story-h{
+    width: 71px;
+    height: 71px;
+   }
+   .containerRR .main .post-views  .stories .friend .story-h img{
+    
+    width: 65px;
+    height: 65px;
+    align-self: center;
+   }
+   .containerRR .main .post-views  .stories{
+    width: 100%;
+    padding-left: 9px;
+    border-bottom: 1px solid rgb(141, 135, 135);
+    overflow-y: none;
+    gap: 1.2em;
+   }
+   
+  .containerRR .main .post-views .post{
+    margin-bottom: 20px;
+  }  
+  .containerRR .main .post-views .posts .video{
+    object-fit: cover;
+  }
+}
