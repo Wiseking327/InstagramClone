@@ -4,24 +4,29 @@
     box-sizing: border-box;
     
 }
-
+.containerRR{
+  overflow:auto;
+  display: flex;
+}
 .containerRR .headR .engagement-regular{
-    width: 40%;
-    font-family: "Engagement", cursive;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 2.5em;
-    letter-spacing: 2px;
-    padding-left: 10px;
+    width:60%;
+    height: 50px;
+    margin-left: 4%;
+    
   }
-
+  .containerRR .headR .engagement-regular #instalogo{
+    width: 100%;
+    height: 100%;
+  }
   .containerRR{
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: black;
   }
-  
+  .containerRR .headR .follower{
+    display: none;
+  }
   .containerRR .sidebar{
     display: flex;
     background-color: rgba(0, 0, 0);
@@ -39,9 +44,8 @@
     display: flex;
     position: fixed;
     flex-direction: row;
-    padding: 18px 2px 5px 2px;
+    padding: 14px 2px 5px 2px;
     padding-left: 0.6em;
-    color: white;
     width: 18.8%;
     height: 10vh;
     border-right: 1px solid rgb(44, 44, 44);
@@ -129,23 +133,26 @@
   .containerRR .main .post-views{
     display: flex;
     flex-direction: column;
-    flex: 2;
+    justify-content: center;
     align-items: center;
     /* background-color: rgb(92, 16, 16); */
     width: 60%;
-    padding: 0px 0px 0px 0px;
+   
     
   }
   .containerRR .main .post-views .stories{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
     /* background-color: #ED1E4F; */
     overflow-x: scroll;
     overscroll-behavior-x: scroll;
     padding-left: 10px;
     width: 100%;
-    height: 16vh;
+    /* height: 16vh; */
     display: flex;
     flex-direction: row;
-    gap: 1.1em;
+    gap: 1em;
   }
   .containerRR .main .post-views  .stories::-webkit-scrollbar{
     width: 0;
@@ -155,12 +162,9 @@
     display: flex;
     flex-direction: column;
     width: 6.1em;
-    height: 100%;
     text-decoration: none;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 3px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
@@ -170,9 +174,9 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-image: linear-gradient(to bottom left, #df43b0 20px, #5541D6 , #ED1E4F, #FC824D, #FEC053 90px);
-    width: 72px;
-    height: 72px;
+    background-image: linear-gradient(to bottom left, #df43b0 20px, #5541D6 , #ED1E4F, #FC824D, #f4e173 90px);
+    width: 70px;
+    height: 70px;
     
   }
 
@@ -180,13 +184,9 @@
     font-size: 12px;
   }
 
-  /* .containerRR .main .post-views .stories .friend .story-h:visited{
-    background-color: rgb(54, 53, 53);
-  } */
-
   .containerRR .main .post-views .stories .friend .story-h img{
-    width: 67px;
-    height: 67px;
+    width: 64px;
+    height: 64px;
     border: 2px solid black;
     border-radius: 50%;
   }
@@ -328,12 +328,35 @@
   font-size: 16px;
   font-weight: bold;
 }
+/* styling the like button */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
+.like-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #d8d5d5;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.like-btn:hover{
+  color: #726666;
+}
+
+.like-btn.liked{
+  color: #ed4956;
+}
+
+.like-count {
+  font-size: 14px;
+  color: #cec6c6;
+}
+/* p tag catption by poster */
 .containerRR .main .post-views .posts .activities .caption{
   display: flex;
   flex-direction: row;
 }
-
+/* design the verified tags */
 .containerRR .main .post-views .posts .activities .caption .verified{
   display: flex;
   justify-content: center;
@@ -363,7 +386,7 @@
   /* background-color: aqua; */
 }
 
-
+/* designing the comment section */
 .containerRR .main .post-views .posts .comments .com{
   background-color: rgba(0, 0, 0, 0);
   outline: none;
@@ -390,7 +413,7 @@
 
 
 
-
+/*  follower section */
 .containerRR .main .followers{
   display: flex;
   flex-direction: column;
@@ -506,106 +529,253 @@
 
 
 
+
+
+/* Responsiveness in max width of 480px */
   @media screen and (max-width:480px)  {
-    body{
-      overflow: visible;
-      background-color: #000000;
-    }
-  
   .containerRR{
-    width: 100%;
-    /* background-color: rgb(109, 25, 25); */
-    overflow: hidden;
+    width: 480px;
   }
   .containerRR .headR .engagement-regular{
     display: flex;
-    width: 32%;
-    font-size: 45px;
-    color: rgb(243, 237, 237);
-    object-fit: contain;
-    text-align: left;
-    overflow: hidden;
-    /* background-color: #FEC053; */
-  }
-  .containerRR .headR{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: #0c0c0c;
-    height: 7%;
-    padding: 3px 2px 2px 2px;
-    position:fixed;
-    top: 0;
-    left: 0;
-    z-index: 7;
-    object-fit: cover;
-  }
-   .containerRR .sidebar{
-    object-fit: cover;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    /* background-color: #0095F6; */
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 7%;
-    z-index: 8;
-    border-top: 1px solid rgb(141, 135, 135);
-   }
-   .containerRR .sidebar .anch>p{
-    display: none;
-   }
-   .containerRR .main{
-    margin-left: 0px;
-    margin-top: 50px;
-    width: 100%;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    padding: 0 auto;
-   }
-   .containerRR .main .followers{
-    display: none;
+    width: 29%;
+    object-fit: cover;
+    margin-left: 0%;
 
-   } 
-
-   .containerRR .main .post-views  .stories{
-    width:12vh ;
-    gap: 0.1em;
-    height: 14vh;
-   }
-   .containerRR .main .post-views  .stories::-webkit-scrollbar{
-    width: 1;
   }
-  .containerRR .main .post-views  .stories .friend p{
-    font-size: 10px;
-    overflow: hidden;
+  .containerRR .headR .follower{
+    display: flex;
+    align-items: center;
+    width: 69%;
+    gap: 4px;
   }
-   .containerRR .main .post-views  .stories .friend .story-h{
-    width: 71px;
-    height: 71px;
-   }
-   .containerRR .main .post-views  .stories .friend .story-h img{
-    
-    width: 65px;
-    height: 65px;
-    align-self: center;
-   }
-   .containerRR .main .post-views  .stories{
-    width: 100%;
-    padding-left: 9px;
-    border-bottom: 1px solid rgb(141, 135, 135);
-    overflow-y: none;
-    gap: 1.2em;
+   .containerRR .headR .follower .drop{
+    font-size: 1rem;
+    position: relative;
+    color: #aaa6a6;
    }
    
-  .containerRR .main .post-views .post{
-    margin-bottom: 20px;
+   .follower .drop .holder{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    background-color:rgb(31, 29, 29);
+    position: absolute;
+    padding: 10px 15px 0px 15px;
+    top: 40px;
+    left:0px;
+    border-radius: 5px;
+    
+   }
+   .follower .drop .holder{
+    display: none;
+   }
+   .follower .drop:hover .holder{
+    display: block;
+   }
+
+   .holder .follow, .favy{
+    width: 100%;
+    display: flex;
+    font-size: 0.9rem;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   }
+   .holder .follow>#a, .favy>#b{
+    margin-left: auto;
+    width: 30px;
+    text-align: center;
+   }
+
+   .follower #searchfor{
+    height: 100%;
+    width: 70%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+   }
+   .follower #searchfor #searchicon{
+    position: absolute;
+    color: #807b7b;
+    font-size: 20px;
+    margin-left: 6px;
+   }
+   .follower #searchfor #searchspace{
+    outline: none;
+    height: 60%;
+    border-radius: 5px;
+    border: none;
+    width:100% ;
+    background-color: #2b2828;
+    padding-left: 30px;
+    font-size: 16px;
+   }
+
+
+   
+ .follower .plus, .notification{
+  margin-left: auto;
+  font-size: 25px;
+  
+  
+ }
+ .follower.notification{
+  text-align: center;
+ }
+  .follower .plus .addpost{
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  background-color:rgb(31, 29, 29);
+  position: absolute;
+  padding: 10px 15px 0px 15px;
+  top: 60px;
+  left:340px;
+  border-radius: 5px;
+  
+  }
+  .follower .plus .addpost{
+  display: none;
+  }
+  .follower .plus:hover .addpost{
+  display: block;
+  }
+
+  .addpost .post480, .storyview{
+  width: 100%;
+  display: flex;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .addpost .post480>#f, .storyview>#g{
+  margin-left: auto;
+  width: 30px;
+  text-align: center;
+  }
+
+  
+  
+
+  
+.containerRR .headR{
+  border-bottom: 1px solid rgb(110, 105, 105);
+  flex-direction: row;
+  width: 480px;
+  background-color: #0c0c0c;
+  padding: 0px 2px 2px 2px;
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  object-fit: cover;
+  
+}
+  .containerRR .sidebar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #0095F6; */
+  width: 480px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 7%;
+  z-index: 7;
+  border-top: 1px solid rgb(141, 135, 135);
+  }
+
+  /*  display none on unwanted icons */
+  .containerRR .sidebar .noti, #create, #more{
+    display:none;
+  }
+  .containerRR .sidebar .anch>p{
+  display: none;
+  }
+  .containerRR .main{
+  /* background-color: #5541D6; */
+  margin-top: 50px;
+  margin-left: 0em;
+  margin-right: 0px;
+  }
+
+
+
+/* quitting display for follower container */
+  .containerRR .main .followers{
+  display: none;
+  }
+
+  .containerRR .main .post-views{
+  width: 100%;
+  
+  }
+  
+  .containerRR .main .post-views  .stories::-webkit-scrollbar{
+  width: 1;
+}
+.containerRR .main .post-views  .stories .friend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerRR .main .post-views  .stories .friend p{
+  font-size: 10px;
+  overflow: hidden;
+  
+}
+  .containerRR .main .post-views  .stories .friend .story-h{
+  width: 71px;
+  height: 71px;
+  }
+  .containerRR .main .post-views  .stories .friend .story-h img{
+  width: 65px;
+  height: 65px;
+  }
+  .containerRR .main .post-views  .stories{
+  
+  margin-top: 5px;
+  padding-left: 9px;
+  border-bottom: 1px solid rgb(141, 135, 135);
+  overflow-y: none;
+  gap: 1.2em;
+  }
+  
+  .containerRR .main .post-views .posts{
+    margin-bottom: 40px;
+    
   }  
   .containerRR .main .post-views .posts .video{
-    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 0px;
+    width: 100%;
+
   }
+  .post-views .posts .activities{
+    margin-bottom: 20px;
+  }
+  
 }
+
+
+/*  responsiveness for maximum width of 380px */
+@media screen and (max-width:390px){
+
+.containerRR .headR{
+  height: 6vh;
+}
+}
+@media screen and (max-width:430px){
+
+  .containerRR .headR{
+    height: 6vh;
+  }
+  }
